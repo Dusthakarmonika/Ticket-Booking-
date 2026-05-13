@@ -1,5 +1,7 @@
 package ticket.booking.entites;
 
+import java.util.List;
+
 public class user {
     private String name;
 
@@ -10,6 +12,51 @@ public class user {
     private List<Ticket> ticketsBooked;
 
     private String userID;
+
+    public user(String name,String password,String hassPassword,List<Ticket> ticketsBooked, String userID){
+        this.name = name;
+        this.password = password;
+        this.hashPassword = hashPassword;
+        this.ticketsBooked = ticketsBooked;
+        this.userID = userID;
+    }
+    public user(){}
+
+    public String getName(){
+        return name;
+    }
+    public String getPassword(){
+        return password;
+    }
+    public String getHashPassword(){
+        return hashPassword;
+    }
+    public List<Ticket> getTicketsBooked(){
+        return ticketsBooked;
+    }
+    public void printTickets(){
+        for(int i = 0; i < ticketsBooked.size(); i++){
+            System.out.println(ticketsBooked.get(i).getTicketInfo());
+        }
+    }
+    public String getUserID(){
+        return userID;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setPassword(String password){
+        this.password = password;
+    }
+    public void setHashPassword(String hashPassword){
+        this.hashPassword = hashPassword;
+    }
+    public void setTicketsBooked(List<Ticket> ticketsBooked){
+        this.ticketsBooked = ticketsBooked;
+    }
+    public void setUserID(String userID){
+        this.userID = userID;
+    }
 
 }
 
