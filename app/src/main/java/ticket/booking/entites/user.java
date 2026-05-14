@@ -23,15 +23,19 @@ public class user {
     public user(){}
 
     public String getName(){
+
         return name;
     }
     public String getPassword(){
+
         return password;
     }
     public String getHashPassword(){
+
         return hashPassword;
     }
     public List<Ticket> getTicketsBooked(){
+
         return ticketsBooked;
     }
     public void printTickets(){
@@ -40,6 +44,7 @@ public class user {
         }
     }
     public String getUserID(){
+
         return userID;
     }
     public void setName(String name){
